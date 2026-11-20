@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>慧农链动 — 农业数字化三端协同平台 | 智慧农业全链路管理</title>
+  <meta name="description" content="慧农链动是面向农户、合作社企业和监管机构的农业数字化三端协同平台，覆盖种植报备、农事服务、售粮预约、质量检测、结算全链路。以数据链接田间与市场，用科技赋能农业全链路数字化协同。">
+  <meta name="keywords" content="智慧农业,农业数字化,三端协同,种植管理,售粮预约,质量检测,农业溯源,合作社管理">
+  <link rel="canonical" href="https://lhn-lei.github.io/huinong-chain-site/">
+  <link rel="icon" type="image/jpeg" href="assets/huinong-logo.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="慧农链动 — 农业数字化三端协同平台">
+  <meta property="og:description" content="以数据链接田间与市场，用科技赋能农业全链路数字化协同。覆盖种植报备、农事服务、售粮预约、质量检测、结算全链路。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lhn-lei.github.io/huinong-chain-site/">
+  <meta property="og:site_name" content="慧农链动">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- JSON-LD Organization -->
+  
+
+  <!-- JSON-LD SoftwareApplication -->
+  
+
+  <style>
+    :root {
+      --ochre-900:#3D2E18; --ochre-800:#4E3A20; --ochre-700:#5F4624; --ochre-600:#70522A;
+      --ochre-500:#A88B52; --ochre-400:#B89B62; --ochre-50:#F5EDDD;
+      --earth-700:#6B5D4A; --earth-500:#8C7B65; --earth-300:#B7A384; --earth-100:#DDD3C3; --earth-50:#F0EBE2;
+      --cream:#F5F1E8; --warm-white:#FBF9F4; --surface:#fff;
+      --charcoal:#2F332F; --text:#2F332F; --text2:#686B63; --text-muted:#93988D;
+      --border:#D8D0C1; --border-light:#E5DFD4;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px;scroll-behavior:smooth}
+    body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif;color:var(--text);background:var(--cream);line-height:1.65}
+    a{color:var(--ochre-600);text-decoration:none}a:hover{color:var(--ochre-500)}
+    img{max-width:100%}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* Header */
+    .header{background:var(--ochre-900);color:#fff;padding:16px 0;position:sticky;top:0;z-index:100}
+    .header .container{display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:700;color:#fff}
+    .site-logo-image{width:36px;height:36px;border-radius:50%;object-fit:cover;background:#f7f2e8;border:1px solid rgba(215,178,99,.9);box-shadow:0 3px 12px rgba(0,0,0,.18)}
+    .logo span{color:var(--earth-300)}
+    .header-actions{display:flex;gap:12px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 24px;border-radius:8px;font-weight:600;font-size:15px;transition:all .2s;border:none;cursor:pointer;min-height:44px}
+    .btn-primary{background:var(--ochre-500);color:#252822}.btn-primary:hover{background:var(--ochre-400);color:#252822}
+    .btn-primary:disabled{background:var(--earth-100);color:var(--text2);cursor:not-allowed}
+    .btn-outline{background:transparent;border:1.5px solid var(--earth-300);color:var(--earth-300)}.btn-outline:hover{background:rgba(183,163,132,.1)}
+    .btn-ghost{background:transparent;color:rgba(255,255,255,.8)}.btn-ghost:hover{color:#fff}
+
+    /* Hero */
+    .hero{background:linear-gradient(175deg,var(--ochre-900) 0%,#4E3A20 35%,var(--ochre-700) 65%,#5F4624 100%);color:#fff;padding:100px 0 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 15%,rgba(200,215,190,.06) 0%,transparent 55%),radial-gradient(ellipse at 70% 60%,rgba(210,195,170,.05) 0%,transparent 50%)}
+    .hero h1{font-size:clamp(32px,5vw,52px);font-weight:800;margin-bottom:20px;position:relative}
+    .hero h1 span{color:var(--earth-300)}
+    .hero .subtitle{font-size:clamp(16px,2.5vw,20px);color:rgba(255,255,255,.7);max-width:640px;margin:0 auto 36px;position:relative;line-height:1.8}
+    .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative}
+
+    /* Section */
+    .section{padding:80px 0}
+    .section-title{text-align:center;margin-bottom:12px}
+    .section-title h2{font-size:clamp(24px,4vw,36px);font-weight:800;color:var(--ochre-800)}
+    .section-title p{color:var(--text2);margin-top:8px;font-size:17px}
+    .section-alt{background:var(--surface)}
+
+    /* Value */
+    .value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-top:48px}
+    .value-card{background:var(--surface);border-radius:12px;padding:32px;border:1px solid var(--border);transition:box-shadow .2s}
+    .value-card:hover{box-shadow:0 8px 24px rgba(47,51,47,.06)}
+    .value-card .icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:24px}
+    .value-card .icon.green{background:rgba(168,139,82,.1);color:var(--ochre-500)}
+    .value-card .icon.gold{background:rgba(183,163,132,.1);color:var(--earth-500)}
+    .value-card h3{font-size:18px;margin-bottom:8px;color:var(--ochre-800)}
+    .value-card p{color:var(--text2);font-size:15px;line-height:1.7}
+
+    /* Process */
+    .process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:48px}
+    .process-step{text-align:center;padding:24px;position:relative}
+    .process-step .step-num{width:48px;height:48px;border-radius:50%;background:var(--ochre-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;margin:0 auto 16px}
+    .process-step h4{font-size:16px;margin-bottom:6px;color:var(--ochre-800)}
+    .process-step p{color:var(--text2);font-size:14px}
+
+    /* Roles */
+    .role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin-top:48px}
+    .role-card{background:var(--surface);border-radius:12px;padding:36px;border:1px solid var(--border);border-top:4px solid var(--ochre-500)}
+    .role-card.gold{border-top-color:var(--earth-300)}
+    .role-card.dark{border-top-color:var(--ochre-900)}
+    .role-card h3{font-size:20px;margin-bottom:16px}
+    .role-card ul{list-style:none;padding:0}
+    .role-card li{padding:8px 0;color:var(--text2);font-size:15px;display:flex;align-items:flex-start;gap:8px}
+    .role-card li svg{color:var(--ochre-400);flex-shrink:0;margin-top:2px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:center}
+    .contact-info h3{font-size:22px;margin-bottom:16px;color:var(--ochre-800)}
+    .contact-info p{color:var(--text2);margin-bottom:24px;line-height:1.8}
+    .contact-form{display:flex;flex-direction:column;gap:16px}
+    .form-input{padding:12px 16px;border:1px solid var(--border);border-radius:8px;font-size:15px;background:var(--surface);width:100%}
+    .form-input:focus{outline:none;border-color:var(--ochre-400);box-shadow:0 0 0 3px rgba(168,139,82,.1)}
+    textarea.form-input{resize:vertical;min-height:96px;line-height:1.6}
+    .form-checkbox{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--text2);cursor:pointer}
+    .form-checkbox input[type=checkbox]{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--ochre-500);cursor:pointer}
+    .form-checkbox a{color:var(--ochre-600);text-decoration:underline}
+    .form-feedback{font-size:14px;padding:10px 12px;border-radius:8px;line-height:1.5}
+    .form-feedback.success{background:rgba(34,139,34,.08);color:#2e7d32;border:1px solid rgba(34,139,34,.2)}
+    .form-feedback.error{background:rgba(211,47,47,.08);color:#c62828;border:1px solid rgba(211,47,47,.2)}
+    .form-feedback.info{background:rgba(168,139,82,.1);color:var(--ochre-700);border:1px solid rgba(168,139,82,.2)}
+
+    /* Footer */
+    .footer{background:var(--ochre-900);color:rgba(255,255,255,.7);padding:48px 0 32px;font-size:14px}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin-bottom:32px}
+    .footer h4{color:#fff;margin-bottom:12px;font-size:16px}
+    .footer a{color:rgba(255,255,255,.6);display:block;padding:4px 0}.footer a:hover{color:var(--earth-300)}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center}
+
+    @media(max-width:768px){
+      .header-actions{gap:8px}
+      .header-actions .btn-ghost{display:none}
+      .contact-grid{grid-template-columns:1fr}
+      .hero{padding:60px 0 48px}
+    }
+  </style>
+<meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <style>.hero .subtitle::after{content:"项目介绍 · 试点候选版本";display:block;margin-top:20px;color:#fff;font-size:16px}.btn:focus-visible,a:focus-visible{outline:3px solid #d7b263;outline-offset:4px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="./" class="logo">
+      <img class="site-logo-image" src="assets/huinong-logo.jpg" alt="慧农链动标志" width="36" height="36">
+      慧农<span>链动</span>
+    </a>
+    <nav class="header-actions" aria-label="主导航">
+      <a href="#features" class="btn btn-ghost">功能介绍</a>
+      <a href="#process" class="btn btn-ghost">业务流程</a>
+      <a href="#roles" class="btn btn-ghost">三端协同</a>
+      <a href="#contact" class="btn btn-ghost">试点说明</a>
+      <a href="#access" class="btn btn-primary">平台入口</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>以数据链接田间与市场<br><span>用科技赋能农业全链路数字化协同</span></h1>
+    <p class="subtitle">慧农链动是面向农户、合作社企业和监管机构的农业数字化三端协同平台。覆盖产前种植报备、产中农事服务、产后售粮预约与质量检测结算全链路，实现数据驱动的智慧农业管理。</p>
+    <div class="hero-actions">
+      <a href="#access" class="btn btn-primary" style="padding:14px 36px;font-size:17px">平台入口</a>
+      <a href="#contact" class="btn btn-outline" style="padding:14px 36px;font-size:17px">试点说明</a>
+    </div>
+  </div>
+</section>
+
+<!-- Features / 平台价值 -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-title">
+      <h2>平台价值</h2>
+      <p>三大核心能力，贯穿农业生产全周期</p>
+    </div>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="icon green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L8 8h8l-4-6z"/><path d="M12 8v14"/></svg>
+        </div>
+        <h3>产前 — 智能种植规划</h3>
+        <p>一户一档数字化管理，地块信息精细化记录。合作社统一发布育苗建议和品种指导，农户在线报备种植计划，实现产前科学决策。</p>
+      </div>
+      <div class="value-card">
+        <div class="icon green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </div>
+        <h3>产中 — 农事服务协同</h3>
+        <p>工单系统实现农户报事、企业派单、技术员响应闭环。虫害防治、施肥咨询、灌溉故障等异常快速处理，技术指导直达田间。</p>
+      </div>
+      <div class="value-card">
+        <div class="icon gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/></svg>
+        </div>
+        <h3>产后 — 售粮检测结算</h3>
+        <p>在线售粮预约→合作社确认拼单→质量检测自动定级→透明结算，全链路数据打通。支持定级标准配置、智能拼单阈值、烘干方案推荐。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process / 业务闭环 -->
+<section class="section section-alt" id="process">
+  <div class="container">
+    <div class="section-title">
+      <h2>业务闭环</h2>
+      <p>从种植到结算，全链路数字化管理</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h4>种植报备</h4>
+        <p>农户在线提交品种、面积、种植方式，企业审核通过</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h4>育苗指导</h4>
+        <p>企业发布育苗建议与品种指导，定向推送相关农户</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h4>农事工单</h4>
+        <p>农户创建工单，企业指派技术人员，在线答复结案</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h4>售粮预约</h4>
+        <p>收获季在线预约售粮，自动拼单生成收购批次</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">5</div>
+        <h4>质量检测</h4>
+        <p>水分/杂质/出米率检测，自动定级，防止重复检测</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">6</div>
+        <h4>结算与确认</h4>
+        <p>查看结算明细与付款凭证，由农户确认收款或提出异议</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Roles / 三端协同 -->
+<section class="section" id="roles">
+  <div class="container">
+    <div class="section-title">
+      <h2>三端协同</h2>
+      <p>农户、企业、监管，三方数据互通</p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2a4 4 0 00-4 4c0 2.5 1.5 3.5 2 5h4c.5-1.5 2-2.5 2-5a4 4 0 00-4-4z"/><path d="M6 21c0-4 2.5-6 6-6s6 2 6 6"/><path d="M16 11h3a2 2 0 012 2v2"/></svg> 农户端</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>一户一档数字化管理</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>种植报备与育苗计划查看</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>农事工单创建与进度跟踪</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>售粮在线预约与结算查看</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>消息通知与数据画像</li>
+        </ul>
+      </div>
+      <div class="role-card gold">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg> 合作社企业端</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>报备审核与育苗计划发布</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>员工管理与权限分配</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>工单指派、答复与结案</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>预约确认与自动拼单</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>质量检测定级与结算管理</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>数据看板与经营分析</li>
+        </ul>
+      </div>
+      <div class="role-card dark">
+        <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg> 监管后台</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>用户与企业状态管理</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>全链路业务溯源监管</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>定级标准与价格配置</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>政策内容发布与管理</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>操作日志与风险预警</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-alt" id="contact">
+  <div class="container" id="access">
+    <div class="section-title"><h2>访问试点平台</h2><p>这里是公开项目介绍页，不是业务办理页面</p></div>
+    <div style="max-width:720px;margin:32px auto;font-size:16px">
+      <p>农户、企业和管理员的登录、数据及业务处理由独立云服务器提供。本页没有登录或申请表，不收集个人信息。</p>
+      <p style="margin:20px 0">当前业务平台仍为试点候选版，使用 HTTP 连接，尚未配置可信 HTTPS。暂勿输入真实敏感资料，也不要在页面提交银行卡或付款信息。正式启用前仍需完成安全与业务验收。</p>
+      <a class="btn btn-primary" href="http://8.217.185.149/app" rel="noreferrer">打开云服务器试点平台</a>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>慧农链动</h4>
+        <p>农业数字化三端协同平台</p>
+        <p style="margin-top:8px">以数据链接田间与市场</p>
+      </div>
+      <div>
+        <h4>产品</h4>
+        <a href="#features">功能介绍</a>
+        <a href="#process">业务流程</a>
+        <a href="#roles">三端协同</a>
+        <a href="#access">平台入口</a>
+      </div>
+      <div>
+        <h4>法律</h4>
+        <a href="#access">隐私政策</a>
+        <a href="#access">用户协议</a>
+      </div>
+      <div>
+        <h4>联系</h4>
+        <a href="#contact">试点说明</a>
+        <a href="#access">隐私政策</a>
+        <a href="#access">用户协议</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 慧农链动 版权所有 | 本平台不宣称任何政府资质认证 | GitHub Pages 项目介绍页</p>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
